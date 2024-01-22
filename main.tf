@@ -1,5 +1,5 @@
-resource "docker_network" "dev_network" {
-  name       = "dev-network"
+resource "docker_network" "network_dev_docker" {
+  name       = "network-dev-docker"
   attachable = true
   ipv6       = false
   driver     = "bridge"
