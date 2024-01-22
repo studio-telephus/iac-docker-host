@@ -9,3 +9,4 @@ resource "docker_network" "dev_network" {
     gateway  = "10.20.0.1"
   }
 }
+
