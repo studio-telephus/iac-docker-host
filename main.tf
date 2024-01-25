@@ -1,5 +1,5 @@
 resource "docker_network" "network_dev_docker" {
-  name       = "network-dev-docker"
+  name       = "dev-docker"
   attachable = true
   ipv6       = false
   driver     = "bridge"
@@ -9,12 +9,12 @@ resource "docker_network" "network_dev_docker" {
     gateway  = "10.20.0.1"
   }
   options = {
-    "com.docker.network.bridge.name" = "network-dev-docker"
+    "com.docker.network.bridge.name" = "dev-docker"
   }
 }
 
 resource "docker_network" "network_tst_docker" {
-  name       = "network-tst-docker"
+  name       = "tst-docker"
   attachable = true
   ipv6       = false
   driver     = "bridge"
@@ -24,7 +24,7 @@ resource "docker_network" "network_tst_docker" {
     gateway  = "10.30.0.1"
   }
   options = {
-    "com.docker.network.bridge.name" = "network-tst-docker"
+    "com.docker.network.bridge.name" = "tst-docker"
   }
 }
 
