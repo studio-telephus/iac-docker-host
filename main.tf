@@ -14,7 +14,7 @@ resource "docker_network" "network_tst_docker" {
   name       = "network-tst-docker"
   attachable = true
   ipv6       = false
-  driver     = "overlay"
+  driver     = "bridge"
   ipam_config {
     ip_range = "10.30.0.0/24"
     subnet   = "10.30.0.0/24"
