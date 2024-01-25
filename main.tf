@@ -8,6 +8,9 @@ resource "docker_network" "network_dev_docker" {
     subnet   = "10.20.0.0/24"
     gateway  = "10.20.0.1"
   }
+  options = {
+    "com.docker.network.bridge.name" = "network-dev-docker"
+  }
 }
 
 resource "docker_network" "network_tst_docker" {
