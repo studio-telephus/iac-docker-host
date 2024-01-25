@@ -20,5 +20,8 @@ resource "docker_network" "network_tst_docker" {
     subnet   = "10.30.0.0/24"
     gateway  = "10.30.0.1"
   }
+  options = {
+    "com.docker.network.bridge.name" = "network-tst-docker"
+  }
 }
 
